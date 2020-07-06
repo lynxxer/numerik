@@ -1,0 +1,10 @@
+.me {
+    transition: 0.3s;
+}
+
+.me:hover {       
+    -webkit-box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.26);
+    transition: 0.3s;
+}
