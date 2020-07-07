@@ -2,49 +2,32 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <div class="me">
-                <lbd-chart
-                  [title]="'Email Statistics'"
-                  [subtitle]="'Last Campaign Performance'"
-                  [chartClass]="'ct-perfect-fourth'"
-                  [chartType]="emailChartType"
-                  [chartData]="emailChartData"
-                  [legendItems]="emailChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-clock-o'"
-                  [footerText]="'Campaign sent 2 days ago'">
-                </lbd-chart>
-            </div>
+                <figure class="highcharts-figure">
+                    <div class="cardChart">
+                        <h6 style="text-align: center;"><b>Real time data</b></h6>
+                        <h3  style="text-align: center;" >Banesa te shitura: {{count}}</h3> <Br>
+                        <!-- <button >Fillo Simulimin</button> -->
+                        <div class="text-center" (click)="incNumber()">
+                            <!-- Animated button -->
+                            <a class="animated-btn text-white" href="#"><i class="fa fa-play"></i></a>
+                        </div>
+                        <br>
+                        <p style="text-align: center;">Fillo Simulimin</p>
+                        
+                    </div>
+                </figure>
         </div>
             <div class="col-md-8">
-                <lbd-chart
-                  [title]="'Users Behavior'"
-                  [subtitle]="'24 Hours performance'"
-                  [chartType]="hoursChartType"
-                  [chartData]="hoursChartData"
-                  [chartOptions]="hoursChartOptions"
-                  [chartResponsive]="hoursChartResponsive"
-                  [legendItems]="hoursChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-history'"
-                  [footerText]="'Updated 3 minutes ago'">
-                </lbd-chart>
-            </div>
+                    <figure class="highcharts-figure">
+                        <div id="container" class="cardChart"></div>
+                    </figure>
+                </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <lbd-chart
-                  [title]="'2014 Sales'"
-                  [subtitle]="'All products including Taxes'"
-                  [chartType]="activityChartType"
-                  [chartData]="activityChartData"
-                  [chartOptions]="activityChartOptions"
-                  [chartResponsive]="activityChartResponsive"
-                  [legendItems]="activityChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-check'"
-                  [footerText]="'Data information certified'">
-                </lbd-chart>
+                <figure class="highcharts-figure">
+                    <div id="secondContainer" class="cardChart"></div>
+                </figure>
             </div>
             <div class="col-md-6">
                 <div class="card">
