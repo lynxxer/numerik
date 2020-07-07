@@ -14,6 +14,7 @@ require('highcharts/modules/stock.src')(Highcharts);
 require('highcharts/modules/exporting.src')(Highcharts);
 require('highcharts/modules/offline-exporting.src')(Highcharts);
 require('highcharts/modules/export-data.src')(Highcharts);
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -28,11 +29,9 @@ export class HomeComponent implements OnInit {
     setInterval(() => {
       this.count++;
     }, 2000)
-
   }
 
   ngOnInit() {
-
  // Create the chart
  Highcharts.chart('container', {
   chart: {
@@ -58,7 +57,8 @@ export class HomeComponent implements OnInit {
           'Nov',
           'Dec'
       ],
-      crosshair: true
+      crosshair: true,
+      max: 11,
   },
   yAxis: {
       min: 0,
@@ -82,19 +82,19 @@ export class HomeComponent implements OnInit {
   },
   series: [{
       name: 'Dardani',
-      data: random.data()
+      data: random.data(12)
 
   }, {
       name: 'Pejton',
-      data: random.data()
+      data: random.data(12)
 
   }, {
       name: 'Bregu Diellit',
-      data: random.data()
+      data: random.data(12)
 
   }, {
       name: 'Emshir',
-      data: random.data()
+      data: random.data(12)
 
   }]
 });
@@ -108,7 +108,7 @@ Highcharts.chart('secondContainer', {
       backgroundColor: 'rgba(0,0,0,0)'
   },
   title: {
-      text: 'Historic World Population by Region'
+      text: 'Historic World Population by Region'.toUpperCase()
   },
   subtitle: {
       text: null
@@ -158,8 +158,43 @@ Highcharts.chart('secondContainer', {
       data: random.data(5)
       }]
     });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//THIRD CHART.!
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    Highcharts.chart('container4', {
+        chart: {
+            type: 'bar',
+            renderTo: 'secondContainer',
+            backgroundColor: 'rgba(0,0,0,0)'
+        },
+    
+        title: {
+            text: 'Pie point CSS'.toUpperCase(),
+        },
+    
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+    
+        series: [{
+            type: 'pie',
+            allowPointSelect: true,
+            keys: ['name', 'y', 'selected', 'sliced'],
+            data: [
+                ['Apples', 29.9, false],
+                ['Pears', 71.5, false],
+                ['Oranges', 106.4, false],
+                ['Plums', 129.2, false],
+                ['Bananas', 144.0, false],
+                ['Peaches', 176.0, false],
+                ['Prunes', 135.6, true, true],
+                ['Avocados', 148.5, false]
+            ],
+            showInLegend: true
+        }]
+    });
 }    
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//INCREMENT NUMBER TEST !
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
