@@ -108,7 +108,7 @@ Highcharts.chart('secondContainer', {
       backgroundColor: 'rgba(0,0,0,0)'
   },
   title: {
-      text: 'Historic World Population by Region'.toUpperCase()
+      text: 'Banesat ne pritje'.toUpperCase()
   },
   subtitle: {
       text: null
@@ -172,7 +172,7 @@ Highcharts.chart('secondContainer', {
         },
     
         title: {
-            text: 'Pie point CSS'.toUpperCase(),
+            text: 'LAGJET NE PRISHTINE'.toUpperCase(),
         },
     
         xAxis: {
@@ -184,14 +184,14 @@ Highcharts.chart('secondContainer', {
             allowPointSelect: true,
             keys: ['name', 'y', 'selected', 'sliced'],
             data: [
-                ['Apples', 29.9, false],
-                ['Pears', 71.5, false],
-                ['Oranges', 106.4, false],
-                ['Plums', 129.2, false],
-                ['Bananas', 144.0, false],
-                ['Peaches', 176.0, false],
-                ['Prunes', 135.6, true, true],
-                ['Avocados', 148.5, false]
+                ['1', 29.9, false],
+                ['2', 71.5, false],
+                ['3', 106.4, false],
+                ['4', 129.2, false],
+                ['5', 144.0, false],
+                ['6', 176.0, false],
+                ['7', 135.6, true, true],
+                ['8', 148.5, false]
             ],
             showInLegend: true
         }]

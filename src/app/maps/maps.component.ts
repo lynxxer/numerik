@@ -32,8 +32,6 @@ export class MapsComponent implements OnInit {
       // disable map rotation using touch rotation gesture
       this.map.touchZoomRotate.disableRotation();
 
-      // Add map controls
-      this.map.addControl(new mapboxgl.NavigationControl());
       this.map.doubleClickZoom.disable();
       
       const marker = new mapboxgl.Marker()

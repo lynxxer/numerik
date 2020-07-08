@@ -9,67 +9,46 @@
                     </div>
                     <div class="content table-responsive table-full-width table-upgrade">
                         <div class="wrapper">
-                            <header>
-                              <h1>Shto nje prone...</h1>
-                              <span>ID: 5988014</span>
-                            </header>
-                            
-                            <div class="ways">
-                              <ul>
-                                <li class="active">
-                                  submit
-                                </li>
-                                <li>
-                                  discussion
-                                </li>
-                              </ul>
+                          <h1>Shto nje prone</h1> <br>
+                          <form>
+                   
+                            <div class="form-group">
+                              <label for="alterEgo">Komania</label>
+                              <input type="text" class="form-control" id="alterEgo" required>
                             </div>
-                            
-                            <div class="sections">
-                              
-                              <section class="active">
-                                <input type="text" placeholder="Title" id="title"/>
-                                <select id="category">
-                                  <option value="summmer">summer</option>
-                                  <option value="winter">winter</option>
-                                  <option value="working">working</option>
-                                  <option value="road">road</option>
-                                </select>
-                                
-                                <div class="select-option">
-                                  <div class="head">Category</div>
-                                  <div class="option"></div>
-                                </div>
-                                
-                                
-                                <div class="images">
-                                  <div class="pic">
-                                    add
-                                  </div>
-                                </div>
-                                
-                                
-                              </section>
-                          
-                              <section>
-                                <input type="text" placeholder="Topic" id="topic"/>
-                                <textarea placeholder="something..." id="msg"></textarea>
-                              </section>
-                            
+
+                            <div class="form-group">
+                              <label for="name">Emri</label>
+                              <input type="text" class="form-control" id="name" required>
                             </div>
+
+                            <div class="form-group">
+                              <label for="name">Mbiemri</label>
+                              <input type="text" class="form-control" id="name" required>
+                            </div>
+
+                    
+                            <div class="form-group">
+                              <label for="power">Zgidh lagjen</label>
+                              <select class="form-control" id="power" required>
+                                <option *ngFor="let lagjja of lagjet" [value]="lagjja">{{lagjja}}</option>
+                              </select>
+                            </div>   
+
+                            <div class="form-group">
+                              <input type="file" 
+                              class="filepond"
+                              name="filepond" 
+                              multiple 
+                              data-allow-reorder="true"
+                              data-max-file-size="3MB"
+                              data-max-files="3"
+                              required>
+                            </div>
+                            <button type="submit" class="btn btn-success" >Submit</button>
                             
-                            <footer>
-                              <ul>
-                                <li><span id="reset">reset</span></li>
-                                <li><span id="send">send</span></li>
-                              </ul>
-                            </footer> 
-                            
+                          </form>
                           </div>
-                          <div class="notification"></div>
-                          <footer>
-                            Inspiration: <a href="https://dribbble.com/shots/2092775-Create-a-new-collection"><i class="fa fa-dribbble" aria-hidden="true"></i>dribbble</a>
-                          </footer>
                     </div>
                 </div>
             </div>

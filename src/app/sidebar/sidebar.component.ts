@@ -12,7 +12,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Kryefaqja',  icon: 'pe-7s-graph', class: '' },
     { path: '/maps', title: 'Harta/Banesat',  icon:'pe-7s-map-marker', class: '' },
     { path: '/user', title: 'Profili i perdoruesit',  icon:'pe-7s-user', class: '' },
-    { path: '/upgrade', title: 'Shto nje prone',  icon:'pe-7s-user', class: '' },
+    { path: '/upgrade', title: 'Shto prone',  icon:'pe-7s-cloud-upload', class: '' },
+    { path: '/typography', title: 'Shiko pronat',  icon:'pe-7s-id', class: '' },
+    //{ path: '/icons', title: 'Ikonat',  icon:'pe-7s-user', class: '' },
 ];
 
 @Component({
