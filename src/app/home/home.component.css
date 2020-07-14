@@ -1,83 +1,20 @@
-.cardChart {
-    box-shadow: 0 0px 4px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .cardChart:hover {
-    box-shadow: 0 0px 16px 0 rgba(0,0,0,0.2);
-  }
 
-  /*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-.animated-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-  display: inline-block;
-  text-align: center;
-  background: #ff3f3f;
-  position: relative;
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: #405065;
 }
 
-.animated-btn::before, .animated-btn::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 50%;
-  background: rgba(255, 63, 63, 0.8);
-  animation: ripple-1 2s infinite ease-in-out;
-  z-index: -1;
+.search-hero {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
 }
 
-.animated-btn::after {
-  background: rgba(255, 63, 63, 0.6);
-  animation: ripple-2 2s infinite ease-in-out;
-  animation-delay: 0.5s;
+.form-control {
+  box-shadow: 0 10px 40px 0 #B0C1D9;
 }
-
-@keyframes ripple-1 {
-  0% {
-      transform: scale(1);
-      opacity: 1;
-  }
-
-  100% {
-      transform: scale(1.5);
-      opacity: 0;
-  }
-}
-
-@keyframes ripple-2 {
-  0% {
-      transform: scale(1);
-      opacity: 1;
-  }
-
-  100% {
-      transform: scale(1.7);
-      opacity: 0;
-  }
-}
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*
-*/
-body {
-  background: #121618;
+.form-control::placeholder  {
+  font-family: FontAwesome;
 }

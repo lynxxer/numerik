@@ -1,45 +1,32 @@
-<div class="main-content">
-    <div class="container-fluid">
-
-            <!-- <div class="col-md-6">
-                <figure class="highcharts-figure">
-                    <div class="cardChart" style="height: 440px;">
-                        <h6 style="text-align: center;"><b>Real time data</b></h6>
-                        <Br> <Br> <Br> <br> <br> <Br>
-                        <h3  style="text-align: center;" >Banesa te shitura: {{count}}</h3> <Br> -->
-                        <!-- <button >Fillo Simulimin</button> -->
-                        <!-- <div class="text-center" (click)="incNumber()"> -->
-                            <!-- Animated button -->
-                            <!-- <br> <br> <Br>
-                                
-                            <a class="animated-btn text-white" href="#"><i class="fa fa-play"></i></a>
-                        </div>
-                        <br>
-                        <p style="text-align: center;">Fillo Simulimin</p>
-                        
-                    </div>
-                </figure>
-        </div>  -->
-        <div class="row">
-            <div class="col-md-6">
-                    <figure class="highcharts-figure">
-                        <div id="container" class="cardChart"></div>
-                    </figure>
-                </div>
-
-            <div class="col-md-6">
-                <figure class="highcharts-figure">
-                    <div id="secondContainer" class="cardChart"></div>
-                </figure>
-            </div>
-        </div>
-        <br>
-            <div class="row">
-                <div class="col-md-6">
-                    <figure class="highcharts-figure">
-                        <div id="container4" class="cardChart"></div>
-                    </figure>
-                </div>
-        </div>
+<div class="container text-center">
+  <h1>{{title}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input class="form-control" 
+        type="text" 
+        name="search"
+        [(ngModel)]="searchText"
+        autocomplete="off" 
+        placeholder="&#61442;  Start searching for a hero by id or name or country"
+        (ngModelChange)="handleChange($event)">
     </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Hero Name</th>
+        <th>Country</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let hero of filteredHeroes">
+        <td>{{hero.id}}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.country}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
