@@ -20,22 +20,32 @@ export class HomeComponent implements OnInit {
     { id: 19, name: 'Magma' , country: 'South Africa'},
     { id: 20, name: 'Tornado' , country: 'Sri Lanka'}
   ];
-  filteredHeroes;
+  public filteredHeroes;
+  public data: any;
+  public filteredData;
   
+
   constructor() {}
 
 
   ngOnInit() {
-      this.filteredHeroes = this.heroes;
+      this.filteredData = this.data;
+      this.getData()
     }
     
   handleChange(value: string) {
-      this.filteredHeroes = this.heroes.filter(hero => {
-        let idMatch = hero.id.toString().includes(value);
-        let nameMatch = hero.name.toLowerCase().includes(value.toLowerCase());
-        let countryMatch = hero.country.toLowerCase().includes(value.toLowerCase());
-        return idMatch || nameMatch || countryMatch || (value == "");
-      });
+      this.filteredData = this.data.filter(user => {
+        let idMatch = user.id.toString().includes(value);
+        let nameMatch = user.name.toLowerCase().includes(value.toLowerCase());
+        let usernameMatch = user.username.toLowerCase().includes(value.toLowerCase());
+        return idMatch || nameMatch || usernameMatch || (value == "");
+      })
+  }
+
+  public getData() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(json => this.data = json)
   }
 
 }
