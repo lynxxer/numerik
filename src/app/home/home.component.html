@@ -16,12 +16,12 @@
       <thead>
       <tr>
         <th>Id</th>
-        <th>Name</th>
-        <th>Username</th>
+        <th>Hero Name</th>
+        <th>Country</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let user of data">
+      <tr *ngFor="let user of filteredUsers">
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
         <td>{{user.username}}</td>

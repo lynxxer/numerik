@@ -6,29 +6,10 @@
                     <div class="header">
                         <!-- Photo Grid -->
                         <div class="row"> 
-                            <div class="column">
-                                <figure>  
-                                    <img src="https://via.placeholder.com/150">
-                                    <figcaption>Banesa e Pare</figcaption>
-                                </figure>
-                            </div>
-                            <div class="column">
-                                <figure>  
-                                    <img src="https://via.placeholder.com/150">
-                                    <figcaption>Banesa e Dyte</figcaption>
-                                </figure>
-
-                            </div>  
-                            <div class="column">
-                                <figure>  
-                                    <img src="https://via.placeholder.com/150">
-                                    <figcaption>Banesa e Trete</figcaption>
-                                </figure>
-                            </div>
-                            <div class="column">
-                                <figure>  
-                                    <img src="https://via.placeholder.com/150">
-                                    <figcaption>Banesa e Katert</figcaption>
+                            <div class="column" *ngFor="let image of [1,2,3,4]">
+                                <figure>
+                                    <img src="https://picsum.photos/200/300">
+                                    <figcaption>Banesa e {{image}}</figcaption>
                                 </figure>
                             </div>
                         </div>
